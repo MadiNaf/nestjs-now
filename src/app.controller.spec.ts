@@ -19,7 +19,7 @@ describe('AppController', () => {
     });
   });
 
-  describe('getLiveTime', () => {
+  describe('getLiveTime on GET /time/:username', () => {
     it('should return Hello john, it\'s 4/5/2021 at 15:10:30', () => {
       const appController = app.get<AppController>(AppController);
       const d: string = 'May 04, 2021 15:10:30';

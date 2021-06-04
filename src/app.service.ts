@@ -7,9 +7,9 @@ export class AppService {
   }
 
   /**
-   * @param username - string
-   * @param date - date string e.j 'May 04, 2021 15:10:30'
-   * @returns - string
+   * @param username - the user name to display
+   * @param date - a string date e.j 'May 04, 2021 15:10:30'
+   * @returns - Hello username, it's DD/MM/YYYY at HH:MM:SS
    */
   getLiveTime(username: string, date?: string): string {
     const today: Date = !!date ? new Date(date) : new Date();

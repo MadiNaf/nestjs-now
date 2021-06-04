@@ -18,4 +18,12 @@ describe('AppController', () => {
       expect(appController.getHello()).toBe('Hello World from ZEIT Now!');
     });
   });
+
+  describe('getLiveTime', () => {
+    it('should return Hello john, it\'s 4/5/2021 at 15:10:30', () => {
+      const appController = app.get<AppController>(AppController);
+      const d: string = 'May 04, 2021 15:10:30';
+      expect(appController.getLiveTime('john', d)).toBe('Hello john, it\'s 4/5/2021 at 15:10:30');
+    });
+  });
 });

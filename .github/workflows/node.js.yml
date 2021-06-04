@@ -28,8 +28,8 @@ jobs:
     - name: Deploy to ZEIT Now
       run:
         npm ci
-        npm run build
-        npm run test
+        npm run build --if-present
+        npm test
         npm run deploy
       env:
         CI: true

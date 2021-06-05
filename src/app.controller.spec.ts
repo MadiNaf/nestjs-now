@@ -12,6 +12,13 @@ describe('AppController', () => {
     }).compile();
   });
 
+  describe('getRootMessage', () => {
+    it('should return Welcome!', () => {
+      const appController = app.get<AppController>(AppController);
+      expect(appController.getRootMessage()).toBe('Welcome!');
+    });
+  });
+
   describe('getHello', () => {
     it('should return "Hello World from ZEIT Now!"', () => {
       const appController = app.get<AppController>(AppController);

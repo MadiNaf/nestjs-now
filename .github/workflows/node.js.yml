@@ -30,7 +30,7 @@ jobs:
         npm ci
         npm run build --if-present
         npm run test
-        npm run deploy
+        yes | npm run deploy
       env:
         CI: true
         ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
